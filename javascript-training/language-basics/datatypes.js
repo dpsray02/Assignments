@@ -49,7 +49,7 @@ let visaStatus = true;
 
 
 
-let empData1 = {
+let empData1 : = {
     "empname" : "Krishu",
     "empId"     : 1234,
     "visaStatus" : true,
