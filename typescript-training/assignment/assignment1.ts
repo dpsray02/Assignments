@@ -20,15 +20,22 @@ console.log(`Person's email address:"${emailAddress}"`)
 
 //6.Coordinates of a location (latitude, longitude): 37.7749, -122.4194
 interface location {
-    "longitude" = number,
-    "lattitude" = number
+    "longitude" : number,
+    "lattitude" : number
 }
+
+let locationDetails : location ={
+    "longitude" : 37.7749,
+    "lattitude" : -122.4194
+}
+
+console.log(`Coordinates of a location (latitude, longitude): ${locationDetails.longitude},${locationDetails.lattitude}`)
 
 
 //7.Person's marital status: true or false
 let martialStatus : boolean = true;
 console.log(`Person's marital status: ${martialStatus}`)
-
+ 
 //8.Person's occupation: "Software Engineer"
 let occupation : string="Software Engineer";
 console.log(`Person's occupation is : "${occupation}"`)
