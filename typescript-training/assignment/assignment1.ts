@@ -18,7 +18,7 @@ console.log(`Amount of money in a customer's bank account:${amount}`)
 let emailAddress : string = "john.doe@example.com"
 console.log(`Person's email address:"${emailAddress}"`)
 
-//6.Coordinates of a location (latitude, longitude): 37.7749, -122.4194
+//6.Coordinates of a location (latitude, longitude): 37.7749, -122.4194===Try with array
 interface location {
     "longitude" : number,
     "lattitude" : number
@@ -30,6 +30,8 @@ let locationDetails : location ={
 }
 
 console.log(`Coordinates of a location (latitude, longitude): ${locationDetails.longitude},${locationDetails.lattitude}`)
+
+
 
 
 //7.Person's marital status: true or false
