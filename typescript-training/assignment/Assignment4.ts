@@ -41,4 +41,4 @@ for (let transaction of transactions){
 
         console.log(`Total Debit Amount: ${totalDebitAmount}`);
         
-        console.log(`Total Suspicious Transactions: ${suspiciousTransactionsCount}
+        console.log(`Total Suspicious Transactions: ${suspiciousTransactionsCount}`);
