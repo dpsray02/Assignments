@@ -5,7 +5,8 @@
     // "rootDir": "./src",
     // "outDir": "./dist",
 
-    "noEmitOnError": false,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
