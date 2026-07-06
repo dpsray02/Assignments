@@ -5,3 +5,5 @@ console.log(`PI: ${PI}`);
 console.log(`add(2, 3): ${add(2, 3)}`);
 console.log(`pi: ${pi}`);
 console.log(`sum(5, 7): ${sum(5, 7)}`);
+
+// we need to use alias incase of duplicate imports to avoid naming conflicts when importing variables or functions with the same name from different modules.
