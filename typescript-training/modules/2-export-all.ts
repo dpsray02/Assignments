@@ -4,6 +4,12 @@
     return a + b;
 }
 
-export { PI, add };
+let name: string = "John Doe";
+
+function greet(): string {
+    return `Hello, ${name}!`;
+}
+
+export { PI, add, name, greet };
 
 // we need to use export statement only once at the end of the module to export all the variables and functions from the module.

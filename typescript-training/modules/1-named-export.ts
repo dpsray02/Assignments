@@ -8,3 +8,10 @@ export function add(a: number, b: number): number {
 
 
 // we need to user the export keyword before each variable or function we want to export.
+
+
+export let name: string = "John Doe";
+
+export function greet(): string {
+    return `Hello, ${name}!`;
+}
