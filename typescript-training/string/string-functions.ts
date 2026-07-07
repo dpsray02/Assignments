@@ -110,3 +110,5 @@ balance = balance.replace(/[^0-9.]/g, "");
 console.log(balance)
 let bal : number = parseFloat(balance);
 console.log(bal >= 10000);
+
+

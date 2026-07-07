@@ -2,7 +2,7 @@ export{PI,add,subtract}
 
 let PI: number = 3.14;
 
-export default function add(x: number, y: number): number {
+exportdefault function add(x: number, y: number): number {
     return x + y;
 }
 
