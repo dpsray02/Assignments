@@ -2,13 +2,17 @@
 
 class Employee {
 
+    constructor(){
+
+    }
+
     //properties /data
     empId : number = 1234;
     empName : string = "John Doe";
     empDepartment : string = "IT";
 
     //method
-    employeeAddress(){
+    employeeAddress(emp:string){
         console.log("Employee Address : 123, Main Street, City, Country");
     }
 
@@ -17,4 +21,4 @@ class Employee {
 //Access the data from the class  
 let obj = new Employee(); // new -> new copy 
 console.log(obj.empId);
-obj.employeeAddress();
+// obj.employeeAddress();
