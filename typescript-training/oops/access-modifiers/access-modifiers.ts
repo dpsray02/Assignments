@@ -73,10 +73,11 @@ class Outsider {
 }
 
 
-let obj = new Person();
-obj.printData(); //Accessing the data from main class
+//let obj = new Person();
+//obj.printData(); //Accessing the data from main class
+
 
 let obj1 = new Child1();
-console.log(obj1.name); //Accessing the data from child class
-console.log(obj1.state); //Accessing the data from child class
+//console.log(obj1.name); //Accessing the data from child class
+//console.log(obj1.state); //Accessing the data from child class
 obj1.printChildData(); //Accessing the data from child class
