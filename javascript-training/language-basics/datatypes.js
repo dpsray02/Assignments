@@ -1,69 +1,84 @@
-//Data types in TypeScript are divided into two major categories. 
+//Data types in JavaScript are divided into two major categories. 
 
 //1. Primitive Data Types (Immutable data types) (meaning the original value won't change if we just perform some operation on top of that. )
 //2. Non-Primitive Data Types (Mutable data types) (meaning the original value will change if we just perform some operation on top of that. )
 
-//Syntax to store data in TypeScript :  declaration variable : datatype = data ;
+//Immutable
+// let a = 10;
+// a+10;
+// console.log(a);
+
+//Mutable
+// let empData = {
+//     "name" :"Bharath",
+//     "empId":1234
+// }
+// empData.age = 35;
+// console.log(empData);
 
 /*********************************************/
 /****************Primitive Datatypes**********/
 /*********************************************/
 
-//number => It can store numbers with decimals without decimals. 
-let empId: number = 1234;
-// empId = "Bharath";
-console.log(empId);
+// number
+// string
+// boolean
+// undefined
+// null
+// symbol
 
-let hikePercentage: number = 98.23;
+
+// number => The data type that can store numbers with decimals or without decimals, without any quotations 
+let num1 = 10;
+let num2 = 10.5;
+console.log(typeof num1);
+console.log(typeof num2);
 
 // string => The data type that can store text, characters, words, sentences, etc. It is always enclosed within single or double quotes or backticks.
-let empName: string = "Bharath Reddy";
-let empRole: string = 'Senior SDET';
+let empName = "Bharath Reddy";
+let empRole = '"Senior" SDET';
+console.log(typeof empName);
+console.log(typeof empRole);
+
+let empInfo = `emp name is ${empName} and emp role is ${empRole}`;
+console.log(empInfo);
+
+let x = 10;
+let y = "10";
+let z = 10;
+console.log(x + y);//concatenation operation
+console.log(x + z);//arithmetic operation
 
 //boolean => Boolean data type will be used to store the result of a condition in the form of true or false. 
-let isRaining: boolean = true;
+let isRaining = true;
+let isSunny = false;
+console.log(typeof isRaining);
+console.log(typeof isSunny);
 
 //undefined => Undefined represents a variable that has been declared but not assigned any value. 
-let age: undefined;
+let age;
 console.log(age);
 
 //null => Null represents a variable that has been declared and assigned a null value or empty value. 
-let salary: null = null;
+let salary = 100000;
+console.log(salary);
+salary = null;
 console.log(salary);
 
-//union  => Union represents more than one data type that can be stored within the variable. 
-let empAddress: string | number | boolean;
+//Symbol 
 
-empAddress = "Hyderabad";
-empAddress = 500081;
-empAddress = true;
-
-//any => Any represents any data type that can be stored within the variable. Indirectly, we are removing the type safety. 
-
-let empData: any;
-
-empData = 1234;
-empData = "Bharath";
-empData = true;
 
 /*********************************************/
 /************Non-Primitive Datatypes**********/
 /*********************************************/
+
 // object => Object data type represents a collection of key-value pairs within the curly braces. 
 
-//create template to store object
-interface empInfo {
-    "empName": string,
-    "empId": number,
-    "visaStatus": boolean,
-    "address": {
-        "city": string,
-        "state": string
-    }
-}
+// let empName = "Bharath";
+// let empId = 1234;
+// let visaStatus = true;
 
-//storing the data
-let empDetails : empInfo = {
+let empData = {
     "empName": "Bharath",
     "empId": 1234,
     "visaStatus": true,
@@ -73,64 +88,65 @@ let empDetails : empInfo = {
     }
 }
 
-//Array => Array can store a list of values. 
-let fruits : string []= ["Apple", "Banana", "Mango", "Grapes"];
+//Access the data from the object. 
+console.log(empData.empId);
+console.log(empData.address.city);
+
+console.log(empData["empId"]); // objectName["keyName"] = value
+console.log(empData["address"]["city"]); // objectName["keyName"]["keyName"] = value
+
+
+
+let key = "empName";
+console.log(empData[key]); //Bharath
+console.log(empData.key); //undefined
+
+//Array => Array is nothing but a list of values in JavaScript. 
+let fruits = ["Apple", "Banana", "Mango", "Grapes"];
 console.log(fruits.length);
 console.log(fruits[2]);
-let prices : number []= [100, 200, 300, 400];
+let prices = [100, 200, 300, 400];
 console.log(prices.length);
 console.log(prices[2]);
-let fruitsAndPrices : (string | number) [] = ["Apple", 100, "Banana", 200, "Mango", 300, "Grapes", 400];
+let fruitsAndPrices = ["Apple", 100, "Banana", 200, "Mango", 300, "Grapes", 400];
 console.log(fruitsAndPrices.length);
 console.log(fruitsAndPrices[2]);
 
-//Tuples : Tuple is an ordered array that represents a list of values in a specific order. 
-
-//Problem Statement : I want to store employee name, employee phone number, and employee visa status together. 
-
-//Array :
-let empInformation : (string | number | boolean ) []= ["Bharath Reddy", 9553220022, true, "Hyderabad"];
-
-//Tuple :
-let empDetail : [string, number, boolean] = ["Bharath Reddy", 9553220022, true ];
-
 //function => Function is a data type that represents a block of code or collection of statements written together to complete a specific task. 
 
-function loginIntoApplication(BrowserName:string, Username:string, Password:string):void { //void meaning no data returned
+function loginIntoApplication(BrowserName, Username, Password) {
     console.log(`Launch the ${BrowserName} Browser`);
     console.log("Enter the URL: https://www.icici.com/");
     console.log(`Enter the username as ${Username} and password as ${Password}`);
     console.log("Click on the login button");
 }
 
-function getAccountBalance() :number {
+function getAccountBalance() {
     console.log("Navigate to the account balance page");
-    let accountBalance :number= 100000;
+    let accountBalance = 100000;
     return accountBalance;
-    // console.log(accountBalance);
 }
 
 //set => Set is a data type that represents a collection of unique values of any data type. 
-let empIds : Set <number | string>= new Set(); //Creating New Empty Set 
+let empIds = new Set(); //Creating New Empty Set 
 empIds.add(1234);//Adding value to the set. 
 empIds.add(1235);
 empIds.add(1234);
-empIds.add("ONE TWO THREE FOUR");
+empIds.add(1237);
 empIds.add(1238);
 
 console.log(empIds.size);
 console.log(empIds);
 
 //Map => Map is a data type that represents a collection of key-value pairs where the keys can be of any data type.
-let empValues : Map<string , number | boolean | string>= new Map(); //duplicate keys are not allowed in the map.
-empValues.set("empId", 1234);
-empValues.set("visaStatus", true);
-empValues.set("address", "Hyderabad");
-empValues.set("empId", 1235);//duplicate key, so the value will be updated to 1235
+let empDetails = new Map(); //duplicate keys are not allowed in the map.
+empDetails.set("empId", 1234);
+empDetails.set("visaStatus", true);
+empDetails.set("address", "Hyderabad");
+empDetails.set("empId", 1235);//duplicate key, so the value will be updated to 1235
 
-console.log(empValues.size);
-console.log(empValues.get("empId"));
-
+console.log(empDetails.size);
+console.log(empDetails.get("empId"));
 
 //Date => Date is a data type that represents a specific point in time, including the date and time information.
 let currentDate = new Date();
