@@ -2,6 +2,8 @@
  class Parent {
 	
 	course: string = "Playwright";
+	name:number =10;
+
 
 	printProject() {
 		console.log("ABC Project");
@@ -13,8 +15,9 @@
 
 class Child extends Parent {
 
-	// course: string = "TypeScript";
+	course: string = "TypeScript";
 
+	
 	printProject() {
 		console.log("XYZ Project");
 	}
@@ -22,7 +25,9 @@ class Child extends Parent {
 	printName(course: string) {
 		console.log(course);
 		console.log(this.course);
-		console.log(super.course);
+		//console.log(super.course);
+		console.log(super.name);
+		
 		super.printProject();
 	}
 }
